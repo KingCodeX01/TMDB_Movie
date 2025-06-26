@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: box-shadow;
+} */
+
+.main-container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* styles.css */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
