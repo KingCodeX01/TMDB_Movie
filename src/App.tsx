@@ -1,18 +1,22 @@
-// import { useState } from 'react'
 import './App.css'
+import { Footer } from './components/Footer';
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import SinglePage from './pages/SinglePage';
 import { Routes, Route } from 'react-router-dom'
 
-function App() {
-  // const [count, setCount] = useState(0)
 
+function App() {
   return (
     <>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/SinglePage/:id' element={<SinglePage />} />
-      </Routes>
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/SinglePage/:id' element={<SinglePage />} />
+        </Routes>
+      </main>
+      <Footer />
     </>
   )
 }

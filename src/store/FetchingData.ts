@@ -4,6 +4,7 @@ import { create } from 'zustand';
 const baseURL = import.meta.env.VITE_BASE_URL;
 
 const useStore = create((set) => ({
+    isTrending: null,
     isPopular: null,
     loading: false,
 
@@ -45,7 +46,7 @@ const useStore = create((set) => ({
             const res = await fetch(`${baseURL}trending/movie/day?language=en-US`, options);
             const jsonData = await res.json();
             console.log(jsonData, 'fully fetched Movies');
-            set({isPopular: jsonData.results});
+            set({ isTrending: jsonData.results});
         } catch (err) {
             console.error("Failed to fetch movies", err);
         } finally {
